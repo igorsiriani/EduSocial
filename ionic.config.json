@@ -1,0 +1,7 @@
+{
+  "name": "social-teacher",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
