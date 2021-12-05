@@ -52,7 +52,7 @@ export class LoginPage implements OnInit {
             break;
           }
 
-          if (1 + 1 == this.listUsers.length){
+          if (i + 1 == this.listUsers.length){
             alert('E-mail ou Senha incorretos');
           }
         }
