@@ -51,6 +51,10 @@ export class LoginPage implements OnInit {
             this.router.navigate(["home"]);
             break;
           }
+
+          if (1 + 1 == this.listUsers.length){
+            alert('E-mail ou Senha incorretos');
+          }
         }
       });
   }
