@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './services/Auth/auth.service';
 import { Storage } from '@ionic/storage';
 import { HTTP } from '@ionic-native/http/ngx';
+import { IonicStorageModule } from '@ionic/storage-angular';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +19,7 @@ import { HTTP } from '@ionic-native/http/ngx';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
+    IonicStorageModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
   ],

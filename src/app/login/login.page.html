@@ -10,11 +10,11 @@
       </ion-item>
       <ion-item>
         <ion-label position="stacked">Senha</ion-label>
-        <ion-input [(ngModel)]="password" name="password"></ion-input>
+        <ion-input [(ngModel)]="password" name="password" type="password"></ion-input>
       </ion-item>
     </div>
 
     <ion-button color="primary" expand="block" (click)="login()">Entrar</ion-button>
-    <ion-button color="secondary" expand="block" (click)="navigateRegister()" type="password">Cadastrar</ion-button>
+    <ion-button color="secondary" expand="block" (click)="navigateRegister()">Cadastrar</ion-button>
   </div>
 </ion-content>

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Storage } from '@ionic/storage';
+import { Storage } from '@ionic/storage-angular';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +7,10 @@ import { Storage } from '@ionic/storage';
 export class StorageService {
 
   constructor(public storage: Storage) { }
+
+  async databaseCreate() {
+    this.storage.create();
+  }
 
     /**
    * Saves a data in the storage using a key

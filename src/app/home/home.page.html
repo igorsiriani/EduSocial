@@ -6,6 +6,7 @@
       <ion-label>Nova postagem</ion-label>
       <ion-textarea [(ngModel)]="post"></ion-textarea>
     </ion-item>
+    <input type="file" [(ngModel)]="fileComponent" (change)="onFileChange($event)"/>
     <h6 (click)="sendPost()">Enviar</h6>
   </div>
 
@@ -22,6 +23,9 @@
         <p>
           {{ post.content }}
         </p>
+      </div>
+      <div class="image">
+        <img src="{{post.public_url}}">
       </div>
       <div class="post-comment">
         <ion-item>

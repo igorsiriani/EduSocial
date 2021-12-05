@@ -15,20 +15,20 @@ export class AuthService {
       authenticated: false
     };
 
-    // this.storage.get('token').then(
-    //   result => {
-    //     if (!result) {
-    //       this.router.navigate(["login"]);
-    //       return false;
-    //     }
-    //   }, err => {
-    //     this.router.navigate(["login"]);
-    //     return false;
-    //   }
-    // ).catch(err => {
-    //   this.router.navigate(["login"]);
-    //   return false;
-    // });
+    this.storage.get('userId').then(
+      result => {
+        if (!result) {
+          this.router.navigate(["login"]);
+          return false;
+        }
+      }, err => {
+        this.router.navigate(["login"]);
+        return false;
+      }
+    ).catch(err => {
+      this.router.navigate(["login"]);
+      return false;
+    });
 
     return true;
   }
