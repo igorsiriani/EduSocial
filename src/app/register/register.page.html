@@ -1,0 +1,40 @@
+<ion-content>
+  <div class="container">
+
+    <h2>Cadastrar</h2>
+
+    <div class="field-holder">
+      <ion-item>
+        <ion-label position="stacked">Nome</ion-label>
+        <ion-input [(ngModel)]="first_name" name="first_name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Sobrenome</ion-label>
+        <ion-input [(ngModel)]="last_name" name="last_name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Aniversário</ion-label>
+        <ion-input [(ngModel)]="birthday" name="birthday"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Telefone</ion-label>
+        <ion-input [(ngModel)]="phone" name="phone"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">CPF</ion-label>
+        <ion-input [(ngModel)]="cpf" name="cpf"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">E-mail</ion-label>
+        <ion-input [(ngModel)]="email" name="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input [(ngModel)]="password" name="password" type="password"></ion-input>
+      </ion-item>
+    </div>
+
+    <ion-button color="primary" expand="block" (click)="register()">Cadastrar</ion-button>
+  </div>  
+
+</ion-content>

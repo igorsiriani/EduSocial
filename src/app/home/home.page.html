@@ -1,8 +1,16 @@
 <div class="head-spacer"></div>
 
 <ion-content class="bg-gray" [fullscreen]="true">
+  <div class="create-post">
+    <ion-item>
+      <ion-label>Nova postagem</ion-label>
+      <ion-textarea [(ngModel)]="post"></ion-textarea>
+    </ion-item>
+    <h6 (click)="sendPost()">Enviar</h6>
+  </div>
+
   <div class="post-list">
-    <div class="post-card" *ngFor="let post of postList">
+    <div class="post-card" *ngFor="let post of postList;let i = index">
       <div class="post_topbar">
         <div class="usy-dt">
           <div class="usy-name">
@@ -12,21 +20,22 @@
       </div>  
       <div class="post-text">
         <p>
-          {{ post.post }}
+          {{ post.content }}
         </p>
       </div>
       <div class="post-comment">
         <ion-item>
-          <ion-input placeholder="Adicionar comentário" class=""></ion-input>
+          <ion-input [(ngModel)]="postComment[i]" placeholder="Adicionar comentário" class=""></ion-input>
         </ion-item>
-        <h6>Comentar</h6>
+        <h6 (click)="postNewComment(i)">Comentar</h6>
       </div>
-      <div class="post_bottom">
+      <div class="post_bottom" *ngIf="hideRuleContent[i]">
         <div class="comments" *ngFor="let comment of post.comments">
           <h6>{{ comment.user.first_name + ' ' + comment.user.last_name }}</h6>
-          <p>{{ comment.comment }}</p>
+          <p>{{ comment.content }}</p>
         </div>
       </div>
+      <h6 class="show-comments" (click)="toggle(i)">{{!hideRuleContent[i] ? 'Exibir Comentários' : 'Esconder Comentários'}}</h6>
     </div>
   </div>
 </ion-content>
